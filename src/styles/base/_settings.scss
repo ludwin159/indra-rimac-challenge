@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+$color-primary: rgba(255, 28, 68, 1);
+$secondary-color: #6464fa;
+$gray_1_titulos: #494f66;
+$gray_2_paragraph: #676f8f;
+$gray_4: #c5cbe0;
+$background-primary: #ecf0ff;
+$white-color: #fff;
+$neutrals-color: #f7f8fc;
+$green-color: #389e0d;
+
+$colors: (
+  'red': rgba(255, 28, 68, 1),
+  'blue': #6464fa,
+  'gray_1': #494f66,
+  'gray_2': #676f8f,
+  'gray_3': #A3ABCC,
+  'gray_4': #c5cbe0,
+  'gray_5': #ecf0ff,
+  'gray_6': #F0F2FA,
+  'white': #fff,
+  'neutrals': #f7f8fc,
+  'green': #389e0d
+);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, p {
+  margin: 0;
+}

@@ -1,0 +1,52 @@
+@import '../../base/settings';
+
+.Input {
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+
+  &__input {
+    width: calc(100% - 29px);
+    height: 25px;
+    font-size: 16px;
+    color: $gray_2_paragraph;
+    padding: 14.5px;
+    outline: none;
+    background: none;
+    border-radius: 4px;
+    border: 1px solid #C5CBE0;
+    
+    &:focus, 
+    &:active {
+      outline: none;
+      border: 1px solid $secondary-color;
+    }
+
+    &.error {
+      border: 1px solid $color-primary;
+      +label {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__label {
+    color: #A3ABCC;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 16px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+
+  }
+  
+  &__label--active {
+    top: -6px;
+    font-size: 12px;
+    line-height: 12px;
+    color: $secondary-color;
+    background: $white-color;
+  }
+}

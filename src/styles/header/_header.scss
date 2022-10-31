@@ -1,0 +1,63 @@
+@import '../base';
+
+.Header {
+  padding: 20px 32px 0 32px;
+  position: fixed;
+  width: calc(100% - 64px);
+  height: 48px;
+  z-index: 100;
+  
+  @include tablet {
+    padding: 20px 60px 0 60px;
+    width: calc(100% - 120px);
+  }
+  
+  @include desktop {
+    padding: 20px 120px 0 120px;
+    width: calc(100% - 240px);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $secondary-color;
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+    padding: 0;
+
+    &__mobile {
+      display: flex;
+      @include tablet {
+        display: none;
+      }
+    }
+    &__desktop {
+      display: none;
+      @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+      }
+    }
+  }
+
+}
+
+.Header__neutrals {
+  background-color: $neutrals-color;
+  @include tablet {
+    background-color: transparent;
+  }
+}
+
+.Header__white {
+  background-color: $white-color;
+}

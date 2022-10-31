@@ -1,0 +1,40 @@
+@import '../../base/settings';
+
+.Checkbox {
+  display: flex;
+  gap: 12px;
+
+
+  &__item {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray_4;
+    transition: background .5s ease;
+  }
+
+  &__item--active {
+    background-color: $green-color;
+    width: 20px;
+    height: 20px;
+    border: none;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: .2px;
+    font-weight: 300;
+    color: $gray_2_paragraph;
+    margin: 0;
+    font-family: 'roboto';
+
+    a {
+      font-weight: 400;
+      color: #676f8f;
+    }
+  }
+}

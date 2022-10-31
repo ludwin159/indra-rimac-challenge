@@ -1,0 +1,9 @@
+@import '../base';
+
+.BuildPlan {
+  padding-top: 68px;
+
+  &__info {
+    background-color: $neutrals-color;
+  }
+}
