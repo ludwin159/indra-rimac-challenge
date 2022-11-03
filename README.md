@@ -28,3 +28,4 @@ este consta de 3 partes. La primera es para los datos del usuario, la segunda es
 2. Crear un archivo con el nombre ".env.local" en la raiz del proyecto y pegar la siguiente variable de entorno "REACT_APP_BASE_PATH_URL_JPH='https://jsonplaceholder.typicode.com"
 3. Dentro del proyecto ejecutar el comando "npm instal" para instalar todas las dependencias del proyecto.
 4. con el comando npm run start puede correr el proyecto
+
