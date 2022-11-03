@@ -16,12 +16,22 @@
       background-color: B.$neutrals-color;
       max-width: 408px;
     }
+
+    @include B.tv {
+      width: 30%;
+      max-width: none;
+    }
   }
 
   &__description {
     @include B.desktop {
       max-width: 384px;
       width: 384px;
+    }
+
+    @include B.tv {
+      width: 30%;
+      max-width: none;
     }
   }
 
@@ -44,9 +54,8 @@
   &__amount {
     margin-top: 189px;
 
-    @include B.desktop {
-      min-width: 224px;
-    }
+    @include B.desktop { min-width: 224px; }
+    @include B.tv { width: 30%;  max-width: none;}
   }
 
   &__info {

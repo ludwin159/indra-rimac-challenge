@@ -23,6 +23,7 @@
       height: auto;
       min-width: 408px;
     }
+    @include tv { min-width: auto; width: 50%;}
   }
 
   &__right {
@@ -67,6 +68,7 @@
       max-width: 480px;
       margin-left: 0;
     }
+    @include tv { max-width: 770px; }
     
     &__welcome {
       @include text__lato(28px);

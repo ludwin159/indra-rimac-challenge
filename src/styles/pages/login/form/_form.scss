@@ -5,13 +5,15 @@
   margin-top: 40px;
   @include text__lato(24px);
   @include tablet {
-    max-width: 288px;
+    max-width: 290px;
     margin-top: 110px;
   }
 
   @include desktop {
     margin-top: 146px;
   }
+  
+  @include tv { max-width: none; }
 
   &__legend {
     border: none;

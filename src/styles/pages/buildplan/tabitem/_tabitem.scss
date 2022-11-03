@@ -73,6 +73,10 @@
       margin: 0;
     }
 
+    @include B.tv {
+      max-width: calc(100% - 20px);
+    }
+
     &__noshow {
       color: transparent;
       display: none;
