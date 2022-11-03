@@ -9,10 +9,10 @@ const Header = ({bgColor = 'Header__white'}: IHeader) => {
     <div className={`Header ${bgColor}`}>
       <div className='Header__container'>
         <img onClick={() => navigate('/')} src={LogoRimac} alt="Logo del rimac" />
-        <button className='Header__button Header__button__mobile'>
+        <a href='tel:(01) 411 6001' className='Header__button Header__button__mobile'>
           <img src={loginImages.IconTel} alt="Icono de llamadas" />
           Llámanos
-        </button>
+        </a>
 
         <div className='Header__button__desktop'>
           <p>¿Tienes alguna duda?</p>
