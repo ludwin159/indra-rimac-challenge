@@ -13,6 +13,8 @@
     margin-bottom: 99px;
   }
 
+  @include tv { margin-top: calc(100vw / (30)); }
+
   &__text {
     width: calc(100% - 112px);
     max-width: 200px;
@@ -28,6 +30,8 @@
       margin: 0;
       margin-top: 24px;
     }
+
+    @include tv { max-width: none; }
   }
 
   &__h1, &__h2 {
