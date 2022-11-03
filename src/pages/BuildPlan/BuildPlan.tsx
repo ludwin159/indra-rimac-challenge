@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 import {
   AddOrremove,
@@ -8,10 +9,13 @@ import {
   Price,
 } from '../../components/pages/BuildPlan'
 import { cars, ICars } from '../../db/cars.data'
-import { randomNumber, scrollTop } from '../../utils/functions'
+import { IRootState } from '../../redux/types'
+import { scrollTop } from '../../utils/functions'
 
 const BuildPlan = () => {
-  const car: ICars = cars[randomNumber(0, 10)]
+  const { placa } = useSelector((state: IRootState) => state.User)
+  const indexCar = Number(placa.slice(-1))
+  const car: ICars = cars[indexCar]
 
   useEffect(() => {
     scrollTop()
