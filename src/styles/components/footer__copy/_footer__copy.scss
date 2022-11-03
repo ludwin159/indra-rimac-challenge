@@ -1,0 +1,7 @@
+@use '../../base' as *;
+
+.Copy {
+  display: block;
+  @include text__neutrals;
+  font-weight: 300;
+}

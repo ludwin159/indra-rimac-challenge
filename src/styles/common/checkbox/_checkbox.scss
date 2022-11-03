@@ -1,4 +1,4 @@
-@import '../../base/settings';
+@use '../../base' as *;
 
 .Checkbox {
   display: flex;
@@ -24,13 +24,10 @@
   }
 
   &__info {
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: .2px;
-    font-weight: 300;
-    color: $gray_2_paragraph;
-    margin: 0;
     font-family: 'roboto';
+    @include text__neutrals(12px, #676f8f);
+    font-weight: 300;
+    margin: 0;
 
     a {
       font-weight: 400;

@@ -4,7 +4,7 @@ const Select = ({
   id,
   options = [],
   placeholder,
-  onChange,
+  onChange= () => {},
   value,
 }: ISelect) => {
   return (

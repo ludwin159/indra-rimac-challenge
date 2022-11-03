@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap');
 
 $color-primary: rgba(255, 28, 68, 1);
+$color_red_2: rgba(252, 96, 107, 1);
 $secondary-color: #6464fa;
 $gray_1_titulos: #494f66;
 $gray_2_paragraph: #676f8f;
+$gray_3: #A3ABCC;
 $gray_4: #c5cbe0;
+$gray_6: #F0F2FA;
 $background-primary: #ecf0ff;
 $white-color: #fff;
 $neutrals-color: #f7f8fc;
@@ -12,6 +15,7 @@ $green-color: #389e0d;
 
 $colors: (
   'red': rgba(255, 28, 68, 1),
+  'red_2': rgba(252, 96, 107, 1),
   'blue': #6464fa,
   'gray_1': #494f66,
   'gray_2': #676f8f,
@@ -32,6 +36,14 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-h1, h2, p {
+div, img {
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3, p {
   margin: 0;
+}
+
+button {
+  cursor: pointer;
 }

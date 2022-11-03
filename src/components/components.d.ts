@@ -8,8 +8,13 @@ export interface IInput {
   id: string
   label: string
   type?: 'text' | 'number'
-  value: string | number
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  required: boolean
+  maxLength?: number
+  state : IInputValid
+  setState: (ev: IInputValid) => void
+  validator?: boolean
+  textError?: string
+  textUppercase?: boolean
 }
 
 export interface ICheckbox {
@@ -24,8 +29,11 @@ export interface IButton {
   w100?: boolean
   variant?: 'circle' | 'rectangle' | 'outline'
   onClick?: () => void
+  background?: 'transparent' | 'blue' | 'red'
+  disabled?: boolean
   color?:
     | 'red'
+    | 'red_2'
     | 'blue'
     | 'gray_1'
     | 'gray_2'
@@ -53,7 +61,7 @@ export interface ISelect {
   id: string
   options: IOptions[]
   placeholder?: string
-  onChange: (e: ChangeEvent<HTMLSelectElement>) => void
+  onChange?: (e: ChangeEvent<HTMLSelectElement>) => void
   value: string | number
 }
 
@@ -73,5 +81,13 @@ export interface ITabItem {
   title: string
   icon: string
   info: string
-  isChecked: boolean
+  amount: number
+  idx?: number
+  isCheck?: boolean | undefined
+}
+
+
+export interface IInputValid {
+  value: string | number | boolean | any
+  isValid: boolean | null
 }

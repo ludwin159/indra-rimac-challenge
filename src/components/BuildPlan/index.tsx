@@ -1,8 +1,0 @@
-export { default as InfoUser } from './InfoUser'
-export { default as Pagination } from './Pagination'
-export { default as Price } from './Price'
-export { default as AddOrremove } from './AddOrremove' 
-export { default as TabOne } from './TabOne' 
-export { default as TabItem } from './TabItem'
-export { default as TabsMenu } from './TabsMenu'
-export { default as AmountClient } from './AmountClient'

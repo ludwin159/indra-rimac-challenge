@@ -1,0 +1,43 @@
+@use '../../../base' as B;
+
+.Price {
+  
+  @include B.desktop {
+    @include B.center__item__between;
+    padding-bottom: 43px;
+    border-bottom: 1px solid #E4E8F7;
+  }
+
+  &__minmax {
+    display: flex;
+  }
+
+  svg {
+    margin: 0 12px;
+  }
+
+  &__amount {
+    @include B.text__lato(16px);
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  &__p {
+    @include B.text__lato(12px, #676f8f);
+    text-transform: uppercase;
+  }
+
+  &__priceWrap {
+    width: 100%;
+    @include B.desktop {
+      max-width: 160px;
+    }
+  }
+
+  &__priceRange {
+    
+    @include B.desktop {
+      width: 50%;
+    }
+  }
+}

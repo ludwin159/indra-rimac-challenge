@@ -1,0 +1,118 @@
+@use '../../../base' as B;
+
+.InfoUser {
+  padding: 40px 32px 56px 32px;
+
+  @include B.tablet {
+    padding: 40px 60px 56px 60px;
+  }
+  
+  @include B.desktop {
+    padding: 0;
+  }
+
+  &__h2 {
+    @include B.text__lato(28px);
+    line-height: 36px;
+    letter-spacing: -0.6px;
+    margin: 0;
+
+    @include B.desktop {
+      display: none;
+    }
+  }
+  
+  &__h2__desktop {
+    display: none;
+    
+    span {
+      color: B.$color-primary;
+    }
+    
+    @include B.desktop {
+      @include B.text__lato(40px);
+      line-height: 48px;
+      letter-spacing: -0.6px;
+      display: block;
+    }
+  }
+
+  &__backButton {
+    display: none;
+
+    @include B.desktop {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+      margin-top: 52px;
+      @include B.text__lato(12px, #A3ABCC);
+      text-transform: uppercase;
+    }
+  }
+
+  &__p {
+    @include B.text__info(16px);
+    line-height: 28px;
+    margin: 8px 0 24px 0;
+
+    @include B.desktop {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__container {
+    background-color: B.$white_color;
+    border-radius: 12px;
+    height: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 24px;
+
+    @include B.desktop {
+      border: 3px solid B.$gray_6;
+      height: 166px;
+    }
+  }
+
+  &__text {
+    max-width: 160px;
+
+    @include B.desktop {
+      max-width: 200px;
+    }
+  }
+
+  &__placa {
+    @include B.text__neutrals;
+  }
+
+  &__car {
+    @include B.text__lato(16px);
+    line-height: 24px;
+    letter-spacing: 0.2px;
+
+    @include B.desktop {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__img__mobile {
+    display: block;
+
+    @include B.desktop {
+      display: none;
+    }
+  }
+
+  &__img__desk {
+    display: none;
+
+    @include B.desktop {
+      display: block;
+      margin-bottom: 14px;
+    }
+  }
+}

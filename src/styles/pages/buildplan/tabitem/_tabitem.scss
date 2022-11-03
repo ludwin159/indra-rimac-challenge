@@ -1,0 +1,98 @@
+@use '../../../base' as B;
+
+.Tab__item {
+  border-bottom: 1px solid #D7DBF5;
+  display: flex;
+  margin-bottom: 24px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+
+    @include B.desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contain {
+    margin-left: 16px;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  &__showbutton {
+    display: none;
+    @include B.desktop {
+      display: block;
+      transition: transform .5s ease;
+    }
+  }
+  .show {
+    transform: rotate(-180deg);
+  }
+
+  .noshow {
+    transform: rotate(-360deg);
+  }
+
+  &__mobilebutton {
+
+    @include B.desktop {
+      display: none;
+    }
+  }
+
+  &__buttonDesktop {
+    margin: 12px 0 16px 0;
+    display: none;
+    cursor: pointer;
+    max-width: 84px;
+
+    @include B.desktop {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      p {
+        @include B.text__lato__bold(12px, #6F7DFF);
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+    }
+  }
+
+  &__paragraph {
+    @include B.text__info;
+    margin-bottom: 16px;
+    transition: all .3s ease;
+    max-width: none;
+
+    @include B.desktop {
+      max-width: 279px;
+      margin: 0;
+    }
+
+    &__noshow {
+      color: transparent;
+      display: none;
+    }
+
+    &__show {
+      display: block;
+      color: B.$gray_2_paragraph;
+    }
+  }
+
+  &__showMoreMobile {
+
+    @include B.desktop {
+      display: none;
+    }
+  }
+
+  &__h2 {
+    @include B.text__lato(20px);
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,70 @@
+@use '../../base' as *;
+
+.Login {
+  display: block;
+  padding-top: 64px;
+  
+  
+  &__form {
+    padding: 0 32px 54px;
+    @include tablet {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 159px;
+    }
+  }
+  
+  &__banner {
+    background: $neutrals-color;
+    
+    @include tablet {
+      background-image: url('../../../assets/Login/BackgroundBanner.svg');
+      background-repeat: no-repeat;
+      background-color: #ecf0ff;
+      background-size: contain;
+      background-position: center top;
+      background-size: 100%;
+      max-width: 536px;
+      width: 100%;
+    }
+    @include desktop {
+      height: auto;
+    }
+  }
+  
+  &__info {
+    padding: 0 32px;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      margin-left: 70px;
+    }
+    
+    @include tablet {
+      margin-top: 96px;
+    }
+  }
+  
+  &__copy {
+    display: none;
+    
+    @include tablet {
+      display: block;
+      padding-left: 60px;
+    }
+    
+    @include desktop {
+      padding-left: 120px;
+    }
+  }
+  
+  @include tablet {
+    display: flex;
+    padding-top: 0;
+  }
+  
+  @include desktop {
+    height: auto;
+  }
+}

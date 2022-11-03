@@ -1,0 +1,65 @@
+@use '../../base' as *;
+
+.Header {
+  padding: 20px 32px;
+  position: fixed;
+  width: calc(100% - 64px);
+  z-index: 100;
+  
+  @include tablet {
+    padding: 20px 60px;
+    width: calc(100% - 120px);
+  }
+  
+  @include desktop {
+    padding: 24px 120px;
+    width: calc(100% - 240px);
+  }
+
+  &__container {
+    @include center__item__between;
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    @include center__item__between;
+    color: $secondary-color;
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+    padding: 0;
+    text-decoration: none;
+
+    &__mobile {
+      display: flex;
+      @include tablet {
+        display: none;
+      }
+    }
+    &__desktop {
+      display: none;
+      @include tablet {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: $gray_2_paragraph;
+        font-weight: 400;
+        gap: 23px;
+      }
+    }
+  }
+
+}
+
+.Header__neutrals {
+  background-color: $neutrals-color;
+  @include tablet {
+    background-color: transparent;
+  }
+}
+
+.Header__white {
+  background-color: $white-color;
+}

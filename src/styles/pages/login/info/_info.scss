@@ -1,0 +1,91 @@
+@use '../../../base' as *;
+
+.Info {
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  
+  @include desktop {
+    margin-bottom: 99px;
+  }
+
+  &__text {
+    width: calc(100% - 112px);
+    max-width: 200px;
+    margin: 40px 0 56px 0;
+
+    @include tablet {
+      width: 100%;
+      max-width: 320px;
+      margin-top: 40px;
+    }
+    
+    @include desktop {
+      margin: 0;
+      margin-top: 24px;
+    }
+  }
+
+  &__h1, &__h2 {
+    font-family: 'lato';
+  }
+
+  &__h2 {
+    text-transform: uppercase;
+    @include text__lato__bold(10px, $gray_1_titulos);
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+
+  &__h1{
+    margin: 8px 0 12px 0;
+    @include text__lato(28px);
+    line-height: 36px;
+    letter-spacing: -0.6px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 48px;
+      margin: 4px 0 16px;
+    }
+  }
+
+  &__span {
+    color: $color-primary;
+  }
+
+  &__p {
+    @include text__info();
+    @include tablet {
+      max-width: 288px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    margin-top: 53px;
+    width: 112px;
+    height: 243px;
+    background-repeat: no-repeat;
+    background-image: url('../../../../assets/Login/ImageBannerLogin.svg');
+    
+    @include tablet {
+      background-image: url('../../../../assets/Login/ImageBannerLarge.svg');
+      position: relative;
+      width: 320px;
+      height: 250px;
+      margin: 0;
+    }
+
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+
+}

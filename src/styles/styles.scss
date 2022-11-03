@@ -1,12 +1,11 @@
 
 
 // UI settings.
-@import './base';
+@forward './base';
 
 // Components.
-@import './header';
-@import './common';
+@forward './components';
+@forward './common';
 
-// Screens.
-@import './login';
-@import './buildplan'
+// Pages.
+@forward './pages';

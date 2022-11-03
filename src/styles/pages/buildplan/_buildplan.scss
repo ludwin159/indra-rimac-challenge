@@ -1,0 +1,59 @@
+@use '../../base' as B;
+
+.BuildPlan {
+  padding-top: 64px;
+  
+  @include B.desktop {
+    display: flex;
+    gap: 96px;
+    padding-top: 72px;
+  }
+
+  &__pagination {
+    width: 100%;
+
+    @include B.desktop {
+      background-color: B.$neutrals-color;
+      max-width: 408px;
+    }
+  }
+
+  &__description {
+    @include B.desktop {
+      max-width: 384px;
+      width: 384px;
+    }
+  }
+
+  &__price {
+    padding: 0 32px;
+    margin-top: 44px;
+    margin-bottom: 36px;
+
+    @include B.tablet {
+      padding: 0 60px;
+    }
+
+    @include B.desktop {
+      margin-top: 55px;
+      margin-bottom: 55px;
+      padding: 0;
+    }
+  }
+
+  &__amount {
+    margin-top: 189px;
+
+    @include B.desktop {
+      min-width: 224px;
+    }
+  }
+
+  &__info {
+    background-color: B.$neutrals-color;
+
+    @include B.desktop {
+      background-color: B.$white_color;
+    }
+  }
+}

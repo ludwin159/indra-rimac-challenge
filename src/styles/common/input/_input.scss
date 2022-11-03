@@ -1,4 +1,4 @@
-@import '../../base/settings';
+@use '../../base' as *;
 
 .Input {
   position: relative;
@@ -34,12 +34,11 @@
     color: #A3ABCC;
     position: absolute;
     left: 16px;
-    top: 13px;
+    top: 17px;
     font-size: 16px;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
-
   }
   
   &__label--active {
@@ -48,5 +47,14 @@
     line-height: 12px;
     color: $secondary-color;
     background: $white-color;
+  }
+
+  &__text__error {
+    color: $color-primary;
+    font-size: 10px;
+    transition: transform .5s ease;
+    &:before {
+      content: '*';
+    }
   }
 }

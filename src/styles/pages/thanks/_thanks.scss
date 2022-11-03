@@ -1,0 +1,123 @@
+
+@use '../../base' as *;
+
+.Thanks {
+  padding-top: 72px;
+  overflow-y: hidden;
+
+  @include tablet {
+    display: flex;
+  }
+
+  &__contain {
+    height: calc(100vw / (360 / 208));
+
+    @include tablet {
+      background-color: #F7F8FC;
+      height: auto;
+      min-width: 33.3%;
+    }
+    
+    @include desktop {
+      background-color: #F7F8FC;
+      height: auto;
+      min-width: 408px;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      width: 77.7%;
+    }
+  }
+
+  &__banner {
+    background-image: url('../../../assets/Thanks/IconBanner.svg');
+    background-position: center top;
+    background-size: 100%;
+    height: 100vh;
+    
+    @include tablet {
+      background-image: url('../../../assets/Thanks/IconBannerLarge.svg');
+      width: 100%;
+      margin-top: 96px;
+      margin-left: 75px;
+    }
+    
+    @include desktop {
+      margin-left: 96px;
+    }
+  }
+
+  &__info {
+    padding: 48px 32px 0 32px;
+    
+    @include tablet {
+      padding: 0;
+      max-width: 350px;
+      margin-top: 96px;
+      margin-left: 70px;
+    }
+    
+    @include desktop {
+      max-width: 480px;
+      margin-left: 0;
+    }
+    
+    &__welcome {
+      @include text__lato(28px);
+      line-height: 36px;
+      letter-spacing: -0.6px;
+      margin: 0;
+      
+      span {
+        color: $color-primary;
+      }
+      
+      @include desktop {
+        line-height: 48px;
+        font-size: 36px;
+      }
+    }
+
+    &__detail {
+      @include text__info(16px);
+      font-weight: 300;
+      line-height: 28px;
+      margin: 24px 0 40px 0;
+      span {
+        font-weight: 400;
+      }
+
+      @include tablet {
+        margin: 16px 0 40px 0;
+      }
+    }
+  }
+
+  &__button {
+    button {
+      margin: 0;
+      padding: 20px 32px;
+    }
+
+    @include tablet {
+      max-width: 255px;
+    }
+  }
+
+  &__copy {
+    @include center__item__between;
+    padding-left: 32px;
+    height: 75px;
+    border-top: 1px solid $gray_3;
+    margin-top: 56px;
+    @include tablet {
+      display: none;
+    }
+  }
+}

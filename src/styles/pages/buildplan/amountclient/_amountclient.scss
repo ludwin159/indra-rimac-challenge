@@ -1,0 +1,105 @@
+@use '../../../base' as B;
+
+.AmountClient {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: space-between;
+
+  button {
+    width: auto;
+    @include B.desktop {
+      width: 100%;
+    }
+  }
+
+  &__monto {
+    display: none;
+    
+    @include B.desktop {
+      text-transform: uppercase;
+      font-weight: 700;
+      @include B.text__lato();
+      display: block;
+    }
+  }
+
+  &__description {
+    display: none;
+    h3 {
+      @include B.text__lato(16px);
+      margin: 24px 0 12px 0;
+    }
+
+    @include B.desktop {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 19.42px;
+
+    p { @include B.text__info }
+  }
+  
+  &__container {
+    
+    @include B.desktop {
+      padding-bottom: 19px;
+      border-bottom: 1px solid #E4E8F7;
+    }
+  }
+
+  @include B.tablet {
+    padding: 16px 60px;
+  }
+
+  @include B.desktop {
+    display: block;
+    padding: 0;
+    width: 224px;
+  }
+
+  &__h2, &__p {
+    font-family: 'Lato';
+    color: B.$gray_1_titulos;
+  }
+
+
+  &__h2 {
+    @include B.text__lato(24px);
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    
+    @include B.desktop {
+      @include B.text__lato(28px);
+      line-height: 36px;
+      margin: 10px 0 4px 0;
+    }
+  }
+
+  &__p {
+    @include B.text__lato(10px);
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    
+    @include B.desktop {
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      text-transform: lowercase;
+      color: B.$gray_2_paragraph;
+      &:after {
+        content: 'es';
+      }
+    }
+  }
+
+
+  button {
+    margin: 0;
+  }
+}

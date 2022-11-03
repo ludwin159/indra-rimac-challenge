@@ -1,0 +1,72 @@
+@use '../../../base' as B;
+
+.Pagination {
+  
+  &__mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    border-top: 1px solid B.$neutrals-color;
+
+    @include B.tablet {
+      padding: 12px 60px;
+    }
+
+    @include B.desktop {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+    
+    &__container {
+      @include B.text__lato(16px);
+      display: flex;
+    }
+
+    &__buttons {
+      display: flex;
+      margin-right: 16px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__p {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4px 0;
+      @include B.text__lato(16px);
+      letter-spacing: 0.2px;
+    }
+
+    &__pdisabled {
+      color: #A3ABCC;
+    }
+
+    @include B.desktop {
+      display: flex;
+      margin-left: 120px;
+      margin-top: 52px;
+    }
+  }
+
+  &__p {
+    @include B.text__lato__bold;
+    text-transform: uppercase;
+    
+    p {
+      @include B.text__lato(16px);
+      letter-spacing: 0.2px;
+    }
+  }
+
+  &__box {
+    height: 6px;
+    width: 176px;
+    border-radius: 20px;
+    background-color: B.$secondary-color;
+  }
+}

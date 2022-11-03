@@ -1,0 +1,31 @@
+@use '../../../base' as B;
+
+.InputPrice {
+  border: 1px solid B.$gray_4;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  margin: 16px 0;
+
+  @include B.desktop {
+    margin: 0;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &__price {
+    @include B.text__lato(16px);
+    letter-spacing: 0.2px;
+  }
+
+  &__input {
+    display: flex;
+  }
+}

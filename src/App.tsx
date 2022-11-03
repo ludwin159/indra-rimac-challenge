@@ -1,22 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import BuildPlan from './pages/BuildPlan';
-
-import Login from "./pages/Login";
-
+import AppRouter from './routes/AppRouter';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Login />}/>
-        <Route path='/build-plan' element={<div>
-          <Header bgColor='Header__white' />
-          <BuildPlan />
-        </div>}/>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <AppRouter/>
 }
 
 export default App;

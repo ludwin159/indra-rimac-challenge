@@ -1,0 +1,45 @@
+
+// Lato family
+@mixin text__lato($size: 12px, $color:#494F66) {
+  font-family: 'Lato';
+  font-size: $size;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  color: $color;
+}
+
+@mixin text__lato__bold($size: 10px, $color:#676F8F) {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: $size;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: $color;
+}
+
+// Roboto family
+@mixin text__info($size: 14px, $color:#676F8F) {
+  font-weight: 400;
+  font-size: $size;
+  line-height: 24px;
+  color: $color;
+}
+
+@mixin text__neutrals($size: 12px, $color: #A3ABCC) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $color;
+}
+
+// Box
+
+@mixin center__item__between () {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
